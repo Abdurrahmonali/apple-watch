@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css.html/normalize.css">
   <link rel="stylesheet" href="css.html/styles.css">
 </head>
 <body>
   <!-- HEADER -->
   <header class="container">
-    <div class="div-header-wrapper">
-      <div class="div-apple-icon"><a class="link-apple-logo" href="index.html"><img class="apple-logo" src="img/apple-logo.svg" alt="apple-logo" width="30" height="30"></a></div>
-      <div class="div-sayt-nav">
+      <div class="div-header-wrapper">
+        <div class="div-apple-icon"><a class="link-apple-logo" href="index.html"><img class="apple-logo" src="img/apple-logo.svg" alt="apple-logo" width="30" height="30"></a></div>
         <nav>
           <ul class="ul-nav-link">
             <li>
@@ -29,15 +31,73 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="div-header-form">
         <form class="header-form" action="https://echo.htmlacademy.ru" method="GET">
-          <label><input class="header-input" type="text" name="helping" placeholder="how can we help you?" ></label>
+          <input class="header-input" type="search" name="helping" placeholder="how can we help you?" aria-label="search">
         </form>
       </div>
-    </div>
-  </header>
+</header>
 
-  <script src="js/main.js"> </script>
+<main class="container">
+  <div class=".main-wrapper">
+    <!-- HERO -->
+    <div class="div-hero-wrapper">
+      <div class="hero-texts">
+        <h1 class="headline">Freedom calls.</h1>
+        <p class="text-p text-p-for-border">Answer a call from your surfboard. Ask Siri to send a message. Stream your favorite songs on your run. And do it all while leaving your phone behind. Introducing Apple Watch Series 3 with cellular. Now you have the freedom to go with just your watch.</p>
+        <button class="index-buttons" type="menu">watch the keynote</button>
+      </div>
+      <div class="img-apple-watch">
+        <img src="img/watches.png" srcset="img/watches.png 1x, img/watches@2x.png 2x" width="587" height="565" alt="apple-watch" >
+      </div>
+    </div>
+
+    <!-- FEATURE -->
+    <div class="div-feature">
+      <ul class="ul-feature">
+        <li class="li-feature">
+          <h2>KNOW YOUR RUNS. IN AND OUT.</h2>
+          <p class="text-p feature-text-p">Train smarter with more in-run stats. Want to compare a run to your last five? Just swipe left. Mark splits by selecting pause or using gestures, like tapping the screen or double-clicking the side button. And get a full post-run report, including elevation.</p>
+        </li>
+
+
+        <li class="li-feature"><h2>RUN IN GOOD SPIRITS.</h2>
+          <p class="feature-text-p text-p">A little support can go a long way. You can receive encouraging emoji from friends. And reminders triggered by your friends’ shared activity, the current weather, or your own history give you every reason to run.</p>
+        </li>
+
+
+
+        <li class="li-feature"><h2>JUST DO IT. SUNDAY.</h2>
+          <p class="text-p feature-text-p">Run every Sunday and see how long you can keep your streak alive. Fuel your run with exclusive Nike+ Run Club playlists on Apple Music.</p>
+        <button class="index-buttons feature-button" type="button">LEARN MORE</button></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-wrapper">
+      <div class="div-cta">
+        <div class="div-cta-texts">
+          <h1 class="headline">Nike Sport Band. Light. Flexible. Breathable.</h1>
+          <p class="text-p cta-text-p">Made from the same durable, lightweight fluoroelastomer as the original Apple Watch Sport Band, the Nike Sport Band reduces weight and improves ventilation via row after row of compression-molded perforations.</p>
+          <button class="index-buttons" type="button">buy now</button>
+        </div>
+        <img class="cta-img-watch-in-hand" src="img/watch-in-hand.jpg" srcset="img/watch-in-hand.jpg 1x, img/watch-in-hand@2x.jpg 2x" width="400" alt="">
+      </div>
+    </div>
+
+    <!-- ACTION  -->
+    <div class="div-action">
+      <div class="action-contain">
+        <div class="div-action-texts">
+          <h1 class="headline">Take control of your health.</h1>
+          <p class="text-p">With built-in GPS and altimeter, Apple Watch Nike+ has all the features to help you take your run to the next level. You can even pair your watch wirelessly with compatible gym equipment. And it’s swimproof, so you can take a post-run dip in the pool.</p>
+          <button class="index-buttons" type="button">EXPLORE FEATURES</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+<script src="js/main.js"> </script>
 </body>
 </html>

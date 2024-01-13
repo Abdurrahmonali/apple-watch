@@ -11,29 +11,39 @@ scroll-behavior: smooth;
 box-sizing: inherit;
 }
 :root {
---brand-color: red;
---text-color: black;
---background-color: white;
---font-family: "Arial" sans-serif;
+--brand-color: #EA625C;
+--headline-color: #000000;
+--text-color: #777777;
+--background-color: #EA625C;
+--font-family: "Roboto", sans-serif;
 --font-weight: 400;
 --align-items: center;
 --text-align: var(--align-items);
---border: 2px solid var(--text-color);
+--border: 3px solid #888888;
 }
 
 body {
   display: flex;
   flex-direction: column;
   height: 100%;
-background-color: var(--background-color);
-color: var(--text-color);
+color: white;
 padding: 0%;
 margin: 0%;
-font-family: "Arial", sans-serif;
+font-family: var(--font-family);
 font-size: 16px;
 line-height: 1.5;
 }
-
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+.div-action {
+  background-image: url(../img/runners@2x.jpg);
+}
+}
 img {
   max-width: 100%;
   height: auto;
@@ -42,68 +52,242 @@ img {
 .container {
 width: 100%;
 max-width: 1200px;
-padding-left: 50px;
-padding-right: 50px;
 margin-left: auto;
 margin-right: auto;
 }
 
 /* HEADER */
-.div-header-wrapper {
+header {
   width: 1200px;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: var(--align-items);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: var(--background-color);
+  --background-color:#fff;
+
 }
+.div-header-wrapper {
+  width: 1000px;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: var(--align-items);
+  margin: 0%;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
 .div-apple-icon {
   margin: 0%;
 }
-.link-apple-logo {
-}
 .apple-logo {
-  width: 30px;
-  height: 30px;
-}
-.div-sayt-nav {
-  width: 700px;
-  height: 30px;
-  margin: 0%;
+  width: 35px;
+  height: 40px;
 }
 .ul-nav-link {
+  width: 463px;
+  height: 30px;
+  margin: 0%;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: flex-end;
   list-style: none;
-  margin: 0%;
   padding: 0%;
 }
-.ul-nav-link :not(:first-child) {
-  margin-left: 40px;
+.ul-nav-link :not(:last-child) {
+  margin-right: 30px;
 }
 .nav-link {
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   text-decoration: none;
   color: var(--text-color);
-
-}
-.div-header-form {
-
+  --color: #333333;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
 }
 .header-form {
-
+  width: 153px;
+  height: 30px;
 }
 .header-input {
+  width: 150px;
+  height: 23px;
   border: none;
   border-bottom: var(--border);
-
+  margin: 0%;
 }
 
 /* MAIN-CONTENT  */
-.main-content {
+main:not(last-child) {
+  background-color:#fff;
+}
+.main-wrapper {
+  background-color:#fff;
   flex-grow: 1;
+}
+.div-hero-wrapper {
+  width: 1447px;
+height: 567px;
+  background-color: var(--background-color);
+  --background-color: #fff;
+  display: flex;
+border-bottom: var(--border);
+}
+.hero-texts {
+  width: 490px;
+  height: 290px;
+  padding-left: 20px;
+  margin: 0%;
+  margin-right: 245px;
+}
+.headline {
+  font-family: var(--font-family);
+  font-size: 50px;
+  font-weight: var(--font-weight);
+  --font-weight: 700;
+  line-height: 60px;
+  color: var(--headline-color);
+  margin: 0%;
+  margin-bottom: 30px;
+}
+.text-p {
+  width: 450px;
+  height: 120px;
+  margin: 0%;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  line-height: 24px;
+  color: var(--text-color);
+}
+.text-p-for-border {
+  border-left: var(--border);
+}
+.index-buttons {
+  background-color: var(--background-color);
+  width: 260px;
+  height: 50px;
+  padding: 12px;
+  border: var(--border);
+  --border: none;
+  color: var(--text-color);
+  color:#FFFFFF;
+font-family: var(--font-family);
+font-weight: var(--font-weight);
+--font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+text-align: var(--text-align);
+text-transform: uppercase;
+}
+.img-apple-watch {
+  width: 587px;
+  height: 565px;
+}
+.div-feature {
+  background-color: var(--background-color);
+  --background-color:#fff;
+  width: 1200px;
+  height: 393px;
+  margin: 0%;
+  color: var(--headline-color);
+}
+.ul-feature {
+  width: 1000px;
+  height: 253px;
+  margin: 0%;
+  padding: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.feature-text-p {
+width: 280px;
+height: 168px;
+  padding: 0%;
+  margin: 0%;
+  width: 280px;
+  height: 96px;
+}
+
+.li-feature {
+width: 280px;
+height: 253px;
+margin: 0%;
+}
+.li-feature:not(:last-child) {
+  margin-right: 80px;
+}
+.li-feature h2 {
+  margin-top: 0%;
+}
+.feature-button {
+
+  background-color: var(--background-color);
+  background-color: #fff;
+  color: #EA625C;
+}
+.cta-wrapper {
+  background-color: var(--background-color);
+  --background-color: #fff;
+  margin: 0%;
+width: 1200px;
+height: 740px;
+}
+.div-cta {
+  width: 1000px;
+  height: 600px;
+  margin: 0%;
+  padding: 70px;
+  display: flex;
+}
+.div-cta-texts {
+  width: 490px;
+  height: 387px;
+  margin: 0%;
+  margin-right: 110px;
+  padding: 0%;
+}
+.cta-text-p {
+  width: 450px;
+  height: 96px;
+  border-left: var(--border);
+}
+.cta-img-watch-in-hand {
+width: 400px;
+height: 600px;
+}
+.div-action {
+  background-image: url(../img/runners.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: contain;
+  width: 1200px;
+  height: 830px;
+  padding: 0%;
+  margin: 0%;
+
+}
+.action-contain {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1000px;
+  height: 830px;
+}
+.div-action-texts {
+  width: 490px;
+  height: 350px;
+  padding: 0%;
+  margin: 0%;
+}
+.div-action-texts h1 {
+  color: #fff;
+}
+.div-action-texts p {
+  border-left: var(--border);
+  --border-left: 3px solid white;
+  color: #fff;
 }
