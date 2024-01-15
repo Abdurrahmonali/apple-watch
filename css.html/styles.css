@@ -14,12 +14,12 @@ box-sizing: inherit;
 --brand-color: #EA625C;
 --headline-color: #000000;
 --text-color: #777777;
---background-color: #EA625C;
+--color-background: white;
 --font-family: "Roboto", sans-serif;
---font-weight: 400;
+--weight-font: 400;
 --align-items: center;
 --text-align: var(--align-items);
---border: 3px solid #888888;
+--borders: 3px solid #888888;
 }
 
 body {
@@ -59,15 +59,14 @@ margin-right: auto;
 /* HEADER */
 header {
   width: 1200px;
-  background-color: var(--background-color);
-  --background-color:#fff;
+  background-color:#fff;
 
 }
 .div-header-wrapper {
   width: 1000px;
   height: 42px;
   display: flex;
-  justify-content: space-between;
+
   align-items: var(--align-items);
   margin: 0%;
   padding-top: 30px;
@@ -75,75 +74,82 @@ header {
 }
 
 .div-apple-icon {
-  margin: 0%;
+  margin-right: auto;
+  transition: opacity 0.3s ease;
 }
 .apple-logo {
+  display: block;
+  object-fit: contain;
   width: 35px;
   height: 40px;
 }
+.div-apple-icon:hover {
+  opacity: 0.8;
+}
+.site-nav {
+  margin-right: 40px;
+}
 .ul-nav-link {
-  width: 463px;
-  height: 30px;
+  width: 270px;
+  height: 23px;
   margin: 0%;
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
   justify-content: flex-end;
   list-style: none;
   padding: 0%;
+  /* padding-bottom: 6px; */
 }
 .ul-nav-link :not(:last-child) {
   margin-right: 30px;
 }
 .nav-link {
+  display: block;
   font-family: var(--font-family);
-  font-weight: var(--font-weight);
+  font-weight: var(--weight-font);
   text-decoration: none;
-  color: var(--text-color);
-  --color: #333333;
+  color: #000000;
   font-size: 15px;
   line-height: 22px;
   text-align: center;
+border-bottom: 3px solid transparent;
+transition: border-bottom 0.3s ease;
+}
+.nav-link:hover {
+border-bottom: 3px solid #333;
 }
 .header-form {
   width: 153px;
   height: 30px;
+  border-bottom: var(--borders);
+  padding: 0%;
 }
 .header-input {
-  width: 150px;
-  height: 23px;
-  border: none;
-  border-bottom: var(--border);
-  margin: 0%;
+  border:0;
 }
 
 /* MAIN-CONTENT  */
-main:not(last-child) {
-  background-color:#fff;
-}
 .main-wrapper {
-  background-color:#fff;
+background-color: var(--color-background);
   flex-grow: 1;
 }
 .div-hero-wrapper {
-  width: 1447px;
-height: 567px;
-  background-color: var(--background-color);
-  --background-color: #fff;
   display: flex;
-border-bottom: var(--border);
+  width: 1200px;
+height: 567px;
+border-bottom: var(--borders);
 }
 .hero-texts {
   width: 490px;
   height: 290px;
   padding-left: 20px;
   margin: 0%;
-  margin-right: 245px;
+  margin-right: 100px;
 }
 .headline {
   font-family: var(--font-family);
   font-size: 50px;
-  font-weight: var(--font-weight);
+  font-weight: var(--weight-font);
   --font-weight: 700;
   line-height: 60px;
   color: var(--headline-color);
@@ -157,37 +163,40 @@ border-bottom: var(--border);
   margin-bottom: 30px;
   padding-left: 40px;
   font-family: var(--font-family);
-  font-weight: var(--font-weight);
+  font-weight: var(--weight-font);
   line-height: 24px;
   color: var(--text-color);
 }
 .text-p-for-border {
-  border-left: var(--border);
+  border-left: var(--borders);
 }
 .index-buttons {
-  background-color: var(--background-color);
+  display: inline-block;
+  background-color: #EA625C;
   width: 260px;
   height: 50px;
   padding: 12px;
-  border: var(--border);
-  --border: none;
-  color: var(--text-color);
+  border: none;
   color:#FFFFFF;
 font-family: var(--font-family);
-font-weight: var(--font-weight);
---font-weight: 700;
+font-weight: var(--weight-font);
+font-weight: 700;
 font-size: 18px;
 line-height: 27px;
 text-align: var(--text-align);
 text-transform: uppercase;
+}
+.index-buttons:hover {
+background-color: rgb(36, 121, 121);
+}
+.index-buttons:active {
+opacity: 0.8;
 }
 .img-apple-watch {
   width: 587px;
   height: 565px;
 }
 .div-feature {
-  background-color: var(--background-color);
-  --background-color:#fff;
   width: 1200px;
   height: 393px;
   margin: 0%;
@@ -204,33 +213,46 @@ text-transform: uppercase;
 }
 .feature-text-p {
 width: 280px;
-height: 168px;
   padding: 0%;
   margin: 0%;
-  width: 280px;
-  height: 96px;
 }
-
 .li-feature {
 width: 280px;
-height: 253px;
+height: 126px;
 margin: 0%;
 }
 .li-feature:not(:last-child) {
   margin-right: 80px;
 }
-.li-feature h2 {
+.li-feature-h2 {
   margin-top: 0%;
 }
+.feature-hr {
+  width: 8px;
+  height: 8px;
+  border: 0px;
+  margin-left: 0%;
+  background-color: #782e2e;
+  box-shadow: 16px 0 0 0 #661212,
+  32px 0 0 0 #902828;
+}
 .feature-button {
-
-  background-color: var(--background-color);
-  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+line-height: 1.6;
+text-transform: uppercase;
+  background-color: var(--color-background);
   color: #EA625C;
+  border: none;
+}
+.feature-button::before {
+  margin-right: 10px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--brand-color);
+content: "";
 }
 .cta-wrapper {
-  background-color: var(--background-color);
-  --background-color: #fff;
   margin: 0%;
 width: 1200px;
 height: 740px;
@@ -241,6 +263,8 @@ height: 740px;
   margin: 0%;
   padding: 70px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .div-cta-texts {
   width: 490px;
@@ -261,19 +285,15 @@ height: 600px;
 .div-action {
   background-image: url(../img/runners.jpg);
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
   background-size: contain;
   width: 1200px;
   height: 830px;
   padding: 0%;
   margin: 0%;
-
 }
 .action-contain {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   width: 1000px;
   height: 830px;
 }
@@ -281,13 +301,12 @@ height: 600px;
   width: 490px;
   height: 350px;
   padding: 0%;
-  margin: 0%;
+  margin-left: auto;
 }
 .div-action-texts h1 {
   color: #fff;
 }
 .div-action-texts p {
-  border-left: var(--border);
-  --border-left: 3px solid white;
+  border-left: 3px solid white;
   color: #fff;
 }
